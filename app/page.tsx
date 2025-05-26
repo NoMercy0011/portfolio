@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { LucideBolt, LucideHandshake, LucideBuilding2 } from "lucide-react";
 import { useState } from "react";
 import Logo from "@/components/ui/logo";
-import bg_image from "@/public/bg_image.jpg"
+import HeroSection from "@/components/section/section";
 
 export default function Home() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -137,8 +136,7 @@ export default function Home() {
         )}
       </nav>
 
-      {/* Hero / Intro */}
-      <section className="text-center space-y-6 bg-orange-400">
+      {/* <section className="text-center space-y-6 bg-orange-400">
         <Image className="w-full bg-background blur-xs" alt="background image" src={bg_image}/>
         <div className="">
           <h3 className="text-2xl lg:text-3xl md:text-xl sm:text-md font-bold ">XTERNA Madagascar</h3>
@@ -147,15 +145,14 @@ export default function Home() {
             Belgique et Suisse. Agents déjà opérationnels, collaboration mutuelle et
             efficacité garantie.
           </p>
-        </div>
-        
-      </section>
-
-      <section className="text-center py-5">
-        <Button asChild>
+          <Button asChild>
           <Link href="#services">Voir nos services</Link>
         </Button>
-      </section>
+        </div>
+        
+      </section> */}
+      <HeroSection />
+
       {/* Pourquoi externaliser */}
       <section className="grid md:grid-cols-3 gap-8 py-4">
         

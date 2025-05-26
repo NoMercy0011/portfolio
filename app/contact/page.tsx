@@ -1,9 +1,8 @@
-import React from 'react'
-
-export default function Contact() {
+export default function Test() {
   return (
-    <div>
-      contact page...
+    <div className="h-screen flex items-center justify-center">
+      <div className="w-32 h-32 bg-blue-500 rounded-full animate-slowspin" />
     </div>
-  )
+  );
 }
+
