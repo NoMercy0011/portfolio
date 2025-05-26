@@ -136,21 +136,6 @@ export default function Home() {
         )}
       </nav>
 
-      {/* <section className="text-center space-y-6 bg-orange-400">
-        <Image className="w-full bg-background blur-xs" alt="background image" src={bg_image}/>
-        <div className="">
-          <h3 className="text-2xl lg:text-3xl md:text-xl sm:text-md font-bold ">XTERNA Madagascar</h3>
-          <p className="text-xl lg:text-2xl md:text-md sm:text-xs max-w-3xl mx-auto">
-            Société d'externalisation en bâtiment au service des PME en France,
-            Belgique et Suisse. Agents déjà opérationnels, collaboration mutuelle et
-            efficacité garantie.
-          </p>
-          <Button asChild>
-          <Link href="#services">Voir nos services</Link>
-        </Button>
-        </div>
-        
-      </section> */}
       <HeroSection />
 
       {/* Pourquoi externaliser */}
@@ -185,7 +170,7 @@ export default function Home() {
       {/* Fonctionnement */}
       <section id="fonctionnement" className="space-y-6">
         <h2 className="text-3xl font-bold text-center">
-          Comment fonctionne l'externalisation avec Xtrena&nbsp;?
+          Comment fonctionne l&apos;externalisation avec Xtrena&nbsp;?
         </h2>
         <ol className="space-y-4 max-w-3xl mx-auto list-decimal list-inside text-lg">
           <li>Vous nous exposez vos besoins.</li>
