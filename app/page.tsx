@@ -1,103 +1,252 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { LucideBolt, LucideHandshake, LucideBuilding2 } from "lucide-react";
+import { useState } from "react";
+import Logo from "@/components/ui/logo";
+import bg_image from "@/public/bg_image.jpg"
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <main className="min-h-screen font-[family-name:var(--font-geist-sans)] bg-gray-50">
+      {/* Navbar */}
+      <nav className="bg-cyan-800">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="relative flex h-18 items-center justify-between">
+            {/* Logo à gauche */}
+            
+            <div>
+              <Logo />
+            </div>
+            {/* Desktop navigation à droite */}
+            <div className="hidden sm:block">
+              <div className="flex space-x-4">
+                <Link
+                  href="#fonctionnement"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  Fonctionnement
+                </Link>
+                <Link
+                  href="#services"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  Services
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                >
+                  Contact
+                </Link>
+                <Link
+                href="/recrutement"
+                className="border block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                Recrutement
+              </Link>
+              </div>
+            </div>
+            {/* Mobile menu button */}
+            <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+              <button
+                type="button"
+                className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-none focus:ring-inset"
+                aria-controls="mobile-menu"
+                aria-expanded={mobileOpen}
+                onClick={() => setMobileOpen((open) => !open)}
+              >
+                <span className="sr-only">Open main menu</span>
+                {/* Hamburger icon */}
+                <svg
+                  className={`${
+                    mobileOpen ? "hidden" : "block"
+                  } size-6`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+                {/* Close icon */}
+                <svg
+                  className={`${
+                    mobileOpen ? "block" : "hidden"
+                  } size-6`}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="sm:hidden" id="mobile-menu">
+            <div className="space-y-1 px-2 pt-2 pb-3">
+              <Link
+                href="#fonctionnement"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                Fonctionnement
+              </Link>
+              <Link
+                href="#services"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                Services
+              </Link>
+              <Link
+                href="/contact"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                Contact
+              </Link>
+              <Link
+                href="/recrutement"
+                className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                Recrutement
+              </Link>
+            </div>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero / Intro */}
+      <section className="text-center space-y-6 bg-orange-400">
+        <Image className="w-full bg-background blur-xs" alt="background image" src={bg_image}/>
+        <div className="">
+          <h3 className="text-2xl lg:text-3xl md:text-xl sm:text-md font-bold ">XTERNA Madagascar</h3>
+          <p className="text-xl lg:text-2xl md:text-md sm:text-xs max-w-3xl mx-auto">
+            Société d'externalisation en bâtiment au service des PME en France,
+            Belgique et Suisse. Agents déjà opérationnels, collaboration mutuelle et
+            efficacité garantie.
+          </p>
+        </div>
+        
+      </section>
+
+      <section className="text-center py-5">
+        <Button asChild>
+          <Link href="#services">Voir nos services</Link>
+        </Button>
+      </section>
+      {/* Pourquoi externaliser */}
+      <section className="grid md:grid-cols-3 gap-8 py-4">
+        
+        <div className="bg-white shadow rounded-2xl p-6">
+          <LucideBolt className="text-blue-600 mb-4" size={40} />
+          <h3 className="text-xl font-semibold mb-2">Productivité accrue</h3>
+          <p>
+            Nos équipes prennent en charge vos tâches techniques avec rigueur,
+            réduisant vos délais de production.
+          </p>
+        </div>
+        <div className="bg-white shadow rounded-2xl p-6">
+          <LucideHandshake className="text-green-600 mb-4" size={40} />
+          <h3 className="text-xl font-semibold mb-2">Collaboration fiable</h3>
+          <p>
+            Partenariat basé sur la confiance, l’écoute et l’engagement mutuel à
+            long terme.
+          </p>
+        </div>
+        <div className="bg-white shadow rounded-2xl p-6">
+          <LucideBuilding2 className="text-orange-600 mb-4" size={40} />
+          <h3 className="text-xl font-semibold mb-2">Expertise locale</h3>
+          <p>
+            Accès à des professionnels formés, encadrés et expérimentés dans les
+            normes européennes.
+          </p>
+        </div>
+      </section>
+
+      {/* Fonctionnement */}
+      <section id="fonctionnement" className="space-y-6">
+        <h2 className="text-3xl font-bold text-center">
+          Comment fonctionne l'externalisation avec Xtrena&nbsp;?
+        </h2>
+        <ol className="space-y-4 max-w-3xl mx-auto list-decimal list-inside text-lg">
+          <li>Vous nous exposez vos besoins.</li>
+          <li>Nous sélectionnons les agents les plus qualifiés.</li>
+          <li>Nous validons ensemble le processus et les outils de travail.</li>
+          <li>Le travail est réalisé et suivi depuis Madagascar.</li>
+          <li>Vous recevez les livrables dans les temps.</li>
+        </ol>
+      </section>
+
+      {/* Extraits de services */}
+      <section id="services" className="space-y-8">
+        <h2 className="text-3xl font-bold text-center">Nos Services</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-50 p-6 rounded-2xl shadow">
+            <h3 className="text-xl font-semibold mb-2">
+              Bureau d’étude en électricité bâtiment
+            </h3>
+            <p>
+              Réalisation de schémas, dimensionnement et études techniques
+              conformes aux normes.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-2xl shadow">
+            <h3 className="text-xl font-semibold mb-2">
+              Dessinateur projeteur en bâtiment
+            </h3>
+            <p>
+              Plans d’exécution et PCM fournis avec ArchiCAD ou Revit selon votre
+              cahier de charges.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-2xl shadow">
+            <h3 className="text-xl font-semibold mb-2">
+              Assistance administrative
+            </h3>
+            <p>
+              Accompagnement pour la préparation des dossiers à la mairie ou autres
+              administrations locales.
+            </p>
+          </div>
+          <div className="bg-gray-50 p-6 rounded-2xl shadow">
+            <h3 className="text-xl font-semibold mb-2">Main d’œuvre spécialisée</h3>
+            <p>
+              Personnel qualifié avec tarifs compétitifs pour renforcer vos équipes
+              à distance.
+            </p>
+          </div>
+        </div>
+        <div className="text-center">
+          <Button asChild>
+            <Link href="/contact">Demander un devis</Link>
+          </Button>
+        </div>
+      </section>
+    </main>
   );
 }
+
+
+
