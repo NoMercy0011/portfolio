@@ -1,13 +1,16 @@
 'use client';
 
+import { servicesData } from "../data/services";
+
 interface ServiceSelectorProps {
   services: Record<string, {
     title: string;
     icon: React.ElementType;
   }>;
   activeService: string;
-  onSelect: (key: string) => void;
+  onSelect: (key: "plan" | "etude" | "suivi") => void;
 }
+type ServiceKey = keyof typeof servicesData ;
 
 export default function ServiceSelector({
   services,
@@ -22,7 +25,7 @@ export default function ServiceSelector({
         return (
           <button
             key={key}
-            onClick={() => onSelect(key)}
+            onClick={() => onSelect(key as ServiceKey)}
             className={`flex items-center gap-2 px-4 py-2 rounded-full border transition
               ${isActive ? 'bg-primary text-white border-primary' : 'bg-white text-black border-gray-300'}`}
           >

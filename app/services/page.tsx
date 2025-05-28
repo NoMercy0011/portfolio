@@ -7,8 +7,10 @@ import ServiceSelector from '@/components/section/service.selector';
 import TestimonialCard from '@/components/section/testimonial.card';
 import { useState } from 'react';
 
+type ServiceKey = keyof typeof servicesData ;
+
 export default function ServicesPage() {
-  const [activeService, setActiveService] = useState<keyof typeof servicesData>('plan');
+  const [activeService, setActiveService] = useState<ServiceKey>('plan');
   const service = servicesData[activeService];
 
   return (
@@ -16,7 +18,7 @@ export default function ServicesPage() {
       <header className="text-center space-y-2">
         <h1 className="text-3xl md:text-5xl">Nos Services</h1>
         <p className="text-muted-foreground text-sm md:text-base">
-          Découvrez notre gamme de services en conception et études d'électricité.
+          Découvrez notre gamme de services en conception et études d&apos; électricité.
         </p>
       </header>
 

@@ -15,6 +15,7 @@ export default function BgImage() {
           setIndex((prevIndex) => (prevIndex + 1) % bgImage.length);
         }, 10000); 
         return () => clearInterval(interval);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
   return (

@@ -130,11 +130,11 @@ export default function Fonctionnement() {
             <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
               <div className="container mx-auto px-4 text-center">
                 <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                  L'Externalisation
+                  L&apos; Externalisation
                   <span className="block text-blue-600">Réinventée</span>
                 </h1>
                 <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                  Découvrez comment Xterna Madagascar transforme l'externalisation globale 
+                  Découvrez comment Xterna Madagascar transforme l&apos; externalisation globale 
                   en partenariat stratégique pour votre succès durable.
                 </p>
               </div>
@@ -145,10 +145,10 @@ export default function Fonctionnement() {
               <div className="container mx-auto px-4">
                 <div className="max-w-4xl mx-auto text-center mb-16">
                   <h2 className="text-4xl font-bold text-gray-900 mb-8">
-                    L'Externalisation Globale Nouvelle Génération
+                    L&apos; Externalisation Globale Nouvelle Génération
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                    L'externalisation globale moderne va bien au-delà de la simple délégation de tâches. 
+                    L&apos; externalisation globale moderne va bien au-delà de la simple délégation de tâches. 
                     Chez Xterna Madagascar, nous créons de véritables extensions de votre entreprise, 
                     intégrées seamlessly à vos processus existants pour amplifier vos capacités 
                     sans compromettre la qualité ou la cohérence de votre marque.
@@ -253,7 +253,7 @@ export default function Fonctionnement() {
                     Les Avantages Clés de Notre Collaboration
                   </h2>
                   <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Au-delà de l'externalisation traditionnelle, nous créons un véritable 
+                    Au-delà de l&apos; externalisation traditionnelle, nous créons un véritable 
                     partenariat stratégique pour votre croissance.
                   </p>
                 </div>
@@ -274,10 +274,10 @@ export default function Fonctionnement() {
             <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
               <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                  <h2 className="text-4xl font-bold mb-4">Madagascar : L'Île de l'Excellence</h2>
+                  <h2 className="text-4xl font-bold mb-4">Madagascar : L&apos; Île de l&apos; Excellence</h2>
                   <p className="text-xl text-blue-200 max-w-3xl mx-auto">
                     Des atouts naturels et humains qui font de Madagascar votre destination 
-                    d'externalisation de choix.
+                    d&apos; externalisation de choix.
                   </p>
                 </div>
                 
@@ -313,8 +313,8 @@ export default function Fonctionnement() {
                   Prêt à Révolutionner Votre Approche ?
                 </h2>
                 <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-                  Découvrez comment notre modèle d'externalisation globale peut 
-                  transformer votre entreprise dès aujourd'hui.
+                  Découvrez comment notre modèle d&apos; externalisation globale peut 
+                  transformer votre entreprise dès aujourd&apos; hui.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center">
@@ -336,7 +336,7 @@ export default function Fonctionnement() {
                   <div>
                     <h3 className="text-2xl font-bold mb-4">Xterna Madagascar</h3>
                     <p className="text-gray-400 mb-4">
-                      L'externalisation globale réinventée pour votre succès.
+                      L&apos; externalisation globale réinventée pour votre succès.
                     </p>
                     <div className="flex space-x-4">
                       <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
@@ -385,7 +385,7 @@ export default function Fonctionnement() {
                 </div>
                 
                 <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                  <p>&copy; 2025 Xterna Madagascar. L'excellence en externalisation globale.</p>
+                  <p>&copy; 2025 Xterna Madagascar. L&apos; excellence en externalisation globale.</p>
                 </div>
               </div>
             </footer>
