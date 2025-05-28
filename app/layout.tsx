@@ -2,6 +2,8 @@ import { Analytics } from '@vercel/analytics/next';
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import NavBar from '@/components/ui/navBar';
+import Footer from '@/components/ui/footer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata : Metadata = {
   title: {
-    default: "Xtrena Madagascar",
-    template: "%s | Xtrena Madagascar",
+    default: "XTERNA Madagascar",
+    template: "%s | Xterna Madagascar",
   },
   description:
-    "Xtrena Madagascar est une société d’externalisation spécialisée dans le bâtiment. Nous accompagnons les PME en France, Belgique et Suisse avec des services compétitifs et fiables.",
+    "Xterna Madagascar est une société d’externalisation spécialisée dans le bâtiment. Nous accompagnons les PME en France, Belgique et Suisse avec des services compétitifs et fiables.",
   keywords: [
     "externalisation bâtiment",
     "bureau d’étude électricité",
@@ -29,24 +31,24 @@ export const metadata : Metadata = {
     "ArchiCAD",
     "sous-traitance BTP",
     "main-d'œuvre compétitive",
-    "Xtrena Madagascar",
+    "Xterna Madagascar",
   ],
-  authors: [{ name: "Xtrena Madagascar", url: "https://madatechnologie.vercel.app" }],
-  creator: "Xtrena Madagascar",
-  metadataBase: new URL("https://madatechnologie.vercel.app"),
+  authors: [{ name: "Xterna Madagascar", url: "https://xterna-mg.vercel.app" }],
+  creator: "Xterna Madagascar",
+  metadataBase: new URL("https://xterna-mg.vercel.app"),
 
   openGraph: {
-    title: "Xtrena Madagascar",
+    title: "Xterna Madagascar",
     description:
       "Partenaire d'externalisation bâtiment pour les PME francophones. Bureau d’étude, dessin technique et assistance administrative.",
-    url: "https://madatechnologie.vercel.app",
-    siteName: "Xtrena Madagascar",
+    url: "https://xterna-mg.vercel.app",
+    siteName: "Xterna Madagascar",
     images: [
       {
-        url: "https://madatechnologie.vercel.app/og-image.jpg", // à adapter
+        url: "https://xterna-mg.vercel.app/og-image.jpg", // à adapter
         width: 1200,
         height: 630,
-        alt: "Xtrena Madagascar - Externalisation bâtiment",
+        alt: "Xterna Madagascar - Externalisation bâtiment",
       },
     ],
     locale: "fr_FR",
@@ -55,10 +57,10 @@ export const metadata : Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Xtrena Madagascar",
+    title: "Xterna Madagascar",
     description:
       "Externalisation de services bâtiment pour PME en France, Belgique et Suisse.",
-    images: ["https://madatechnologie.vercel.app/og-image.jpg"],
+    images: ["https://xterna-mg.vercel.app/og-image.jpg"],
   },
 };
 
@@ -72,8 +74,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <NavBar />
         {children}
         <Analytics />
+        <Footer />
       </body>
     </html>
   );
