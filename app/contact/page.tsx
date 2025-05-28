@@ -2,11 +2,28 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Building, Mail, Phone, MapPin, Send, Check, AlertCircle } from 'lucide-react';
-import Link from 'next/link';
+import { Mail, Phone, MapPin, Send, Check, AlertCircle } from 'lucide-react';
+
+type ServiceOption = {
+  id: string;
+  name: string;
+};
+
+type FormData = {
+  company: string;
+  contact: string;
+  email: string;
+  phone: string;
+  country: string;
+  projectType: string;
+  services: string[]; // array of service ids
+  message: string;
+  timeline: string;
+  budget: string;
+};
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     company: '',
     contact: '',
     email: '',
@@ -20,21 +37,21 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' | 'error' | null
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
 
-  const services = [
+  const services: ServiceOption[] = [
     { id: 'electrical', name: 'Bureau d\'étude électricité bâtiment' },
     { id: 'drawing', name: 'Dessinateur projeteur (ArchiCAD/Revit)' },
     { id: 'admin', name: 'Assistance administrative mairie' },
     { id: 'workforce', name: 'Main d\'œuvre spécialisée' }
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleServiceToggle = (serviceId) => {
+  const handleServiceToggle = (serviceId: string) => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(serviceId)
@@ -43,31 +60,34 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulation d'envoi (remplace par ton API)
+
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      // Ici tu peux ajouter ton appel API réel
+      await new Promise(resolve => setTimeout(resolve, 2000)); // simulate API call
       console.log('Données du formulaire:', formData);
-      
       setSubmitStatus('success');
-      
-      // Reset form after success
+
       setTimeout(() => {
         setFormData({
-          company: '', contact: '', email: '', phone: '', country: 'France',
-          projectType: '', services: [], message: '', timeline: '', budget: ''
+          company: '',
+          contact: '',
+          email: '',
+          phone: '',
+          country: 'France',
+          projectType: '',
+          services: [],
+          message: '',
+          timeline: '',
+          budget: ''
         });
         setSubmitStatus(null);
       }, 3000);
-      
+
     } catch (error) {
-      setSubmitStatus('error');
       console.error('Erreur envoi:', error);
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -340,7 +360,7 @@ export default function Contact() {
                   <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
                     <AlertCircle className="text-red-600" size={20} />
                     <p className="text-red-800 font-medium">
-                      Erreur lors de l'envoi. Veuillez réessayer ou nous contacter directement.
+                      Erreur lors de l&apos; envoi. Veuillez réessayer ou nous contacter directement.
                     </p>
                   </div>
                 )}

@@ -1,6 +1,49 @@
-import { LayoutTemplate, Cable, Construction } from 'lucide-react';
+import { LayoutTemplate, Cable, Construction, LucideProps } from 'lucide-react';
+import { ForwardRefExoticComponent, RefAttributes } from 'react';
 
-export const servicesData = {
+type serviveDataType = {
+  plan: {
+    title: string,
+    description: string,
+    icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>,
+    features: string[],
+    testimonials: [
+      {
+        name: string,
+        quote: string,
+      },
+      {
+        name: string,
+        quote: string,
+      },
+    ],
+  },
+  etude: {
+    title: string,
+    description: string,
+    icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>,
+    features: string[],
+    testimonials: [
+      {
+        name: string,
+        quote: string,
+      },
+    ],
+  },
+  suivi: {
+    title: string,
+    description: string,
+    icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>,
+    features: string[],
+    testimonials: [
+      {
+        name: string,
+        quote: string,
+      },
+    ],
+  },
+}
+export const servicesData : serviveDataType = {
   plan: {
     title: 'Plans de conception',
     description: 'Nous réalisons des plans précis et conformes aux normes en vigueur.',
