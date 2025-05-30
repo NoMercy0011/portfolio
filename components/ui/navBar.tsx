@@ -22,13 +22,19 @@ export default function NavBar() {
                   <div className="hidden sm:block">
                     <div className="flex space-x-4">
                       <Link
-                        href="fonctionnement"
+                        href="/"
+                        className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      >
+                        Accueil
+                      </Link>
+                      <Link
+                        href="/fonctionnement"
                         className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       >
                         Fonctionnement
                       </Link>
                       <Link
-                        href="services"
+                        href="/services"
                         className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       >
                         Services
@@ -101,14 +107,20 @@ export default function NavBar() {
                 <div className="sm:hidden" id="mobile-menu">
                   <div className="space-y-1 px-2 pt-2 pb-3">
                     <Link
-                      href="#fonctionnement"
+                        href="/"
+                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                      >
+                        Accueil
+                      </Link>
+                    <Link
+                      href="/fonctionnement"
                       className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       onClick={() => setMobileOpen(false)}
                     >
                       Fonctionnement
                     </Link>
                     <Link
-                      href="#services"
+                      href="/services"
                       className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                       onClick={() => setMobileOpen(false)}
                     >

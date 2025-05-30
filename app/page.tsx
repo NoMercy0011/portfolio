@@ -1,10 +1,11 @@
 "use client";
 
-import HeroSection from "@/components/section/hero.section";
+import {HeroSectionHome} from "@/components/section/hero.section";
 import StepsSection from "@/components/section/steps.section";
 import ServiceSection from "@/components/section/service.section";
 import StatsSection from "@/components/section/stats.section";
 import { CallToActionHome } from "@/components/section/call.to.action";
+import { Footer } from "@/components/ui/footer";
 
 export default function Home() {
   
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <main className="min-h-screen font-[family-name:var(--font-geist-sans)] bg-gray-50 pb-5">
 
-      <HeroSection />
+      <HeroSectionHome />
 
       <section className="py-16 bg-stone-100">
         <div className="container mx-auto px-4">
@@ -31,7 +32,7 @@ export default function Home() {
       <ServiceSection />
       <StatsSection />
       <CallToActionHome />
-      
+      <Footer />
     </main>
   );
 }

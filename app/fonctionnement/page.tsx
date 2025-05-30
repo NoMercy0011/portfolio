@@ -1,6 +1,8 @@
 "use client"
 import { Globe, Clock, DollarSign, Users, TrendingUp, Shield, Headphones, Award, MapPin, Languages, CheckCircle, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
+import {HeroSectionFonctionnement} from "@/components/section/hero.section";
+
 
 export default function Fonctionnement() {
       
@@ -112,33 +114,8 @@ export default function Fonctionnement() {
         return (
         <div>
           <div className="min-h-screen bg-white">
-            {/* Header */}
-            <header className="bg-gradient-to-r from-blue-900 to-blue-700 text-white">
-              <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-                <div className="text-2xl font-bold">Xterna Madagascar</div>
-                <div className="hidden md:flex space-x-8">
-                  <a href="#" className="hover:text-blue-200 transition-colors">Accueil</a>
-                  <a href="#" className="text-blue-200 border-b-2 border-blue-200">Fonctionnement</a>
-                  <a href="#" className="hover:text-blue-200 transition-colors">Services</a>
-                  <a href="#" className="hover:text-blue-200 transition-colors">Contact</a>
-                  <a href="#" className="hover:text-blue-200 transition-colors">Recrutement</a>
-                </div>
-              </nav>
-            </header>
-      
-            {/* Hero Section */}
-            <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-              <div className="container mx-auto px-4 text-center">
-                <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                  L&apos; Externalisation
-                  <span className="block text-blue-600">Réinventée</span>
-                </h1>
-                <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                  Découvrez comment Xterna Madagascar transforme l&apos; externalisation globale 
-                  en partenariat stratégique pour votre succès durable.
-                </p>
-              </div>
-            </section>
+            
+            <HeroSectionFonctionnement />
       
             {/* Description de l'Externalisation Globale */}
             <section className="py-20 bg-white">
@@ -328,67 +305,6 @@ export default function Fonctionnement() {
                 </div>
               </div>
             </section>
-      
-            {/* Footer */}
-            <footer className="bg-gray-900 text-white py-16">
-              <div className="container mx-auto px-4">
-                <div className="grid md:grid-cols-4 gap-8">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-4">Xterna Madagascar</h3>
-                    <p className="text-gray-400 mb-4">
-                      L&apos; externalisation globale réinventée pour votre succès.
-                    </p>
-                    <div className="flex space-x-4">
-                      <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                        <span className="text-sm font-bold">X</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold mb-4">Solutions</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li><a href="#" className="hover:text-white transition-colors">Externalisation Complète</a></li>
-                      <li><a href="#" className="hover:text-white transition-colors">Services Ponctuels</a></li>
-                      <li><a href="#" className="hover:text-white transition-colors">Consulting Stratégique</a></li>
-                      <li><a href="#" className="hover:text-white transition-colors">Formation Équipes</a></li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold mb-4">Avantages</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li><a href="#" className="hover:text-white transition-colors">Réduction des Coûts</a></li>
-                      <li><a href="#" className="hover:text-white transition-colors">Expertise Technique</a></li>
-                      <li><a href="#" className="hover:text-white transition-colors">Flexibilité Horaire</a></li>
-                      <li><a href="#" className="hover:text-white transition-colors">Scalabilité</a></li>
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold mb-4">Contact</h4>
-                    <ul className="space-y-2 text-gray-400">
-                      <li className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        Antananarivo, Madagascar
-                      </li>
-                      <li className="flex items-center">
-                        <Globe className="w-4 h-4 mr-2" />
-                        GMT+3 (Compatible Europe)
-                      </li>
-                      <li className="flex items-center">
-                        <Languages className="w-4 h-4 mr-2" />
-                        Français / Anglais
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                  <p>&copy; 2025 Xterna Madagascar. L&apos; excellence en externalisation globale.</p>
-                </div>
-              </div>
-            </footer>
           </div>
         </div>
         )
