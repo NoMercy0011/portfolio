@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xterna-mg.vercel.app/sitemap.xml
