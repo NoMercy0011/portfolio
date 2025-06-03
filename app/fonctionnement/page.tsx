@@ -2,6 +2,7 @@
 import { Globe, Clock, DollarSign, Users, TrendingUp, Shield, Headphones, Award, MapPin, Languages, CheckCircle, ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 import {HeroSectionFonctionnement} from "@/components/section/hero.section";
+import { CallToActionFonctionnement } from '@/components/section/call.to.action';
 
 
 export default function Fonctionnement() {
@@ -284,27 +285,7 @@ export default function Fonctionnement() {
             </section>
       
             {/* Call to Action */}
-            <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-              <div className="container mx-auto px-4 text-center">
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                  Prêt à Révolutionner Votre Approche ?
-                </h2>
-                <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-                  Découvrez comment notre modèle d&apos; externalisation globale peut 
-                  transformer votre entreprise dès aujourd&apos; hui.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center">
-                    <Globe className="w-5 h-5 mr-2" />
-                    Planifier une Consultation
-                  </button>
-                  <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
-                    <ArrowRight className="w-5 h-5 mr-2" />
-                    Voir nos Services
-                  </button>
-                </div>
-              </div>
-            </section>
+            <CallToActionFonctionnement />
           </div>
         </div>
         )

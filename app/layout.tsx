@@ -20,17 +20,19 @@ export const metadata : Metadata = {
     template: "%s | Xterna Madagascar",
   },
   description:
-    "Xterna Madagascar est une société d’externalisation spécialisée dans le bâtiment. Nous accompagnons les PME en France, Belgique et Suisse avec des services compétitifs et fiables.",
+    "Xterna Madagascar est une société d’externalisation spécialisée dans plusieurs domaines tels que l'information digital, commerce et marketing, assistance en télévente et en téléprospection. Nous accompagnons les PME en France, Belgique et Suisse avec des services compétitifs et fiables.",
   keywords: [
     "externalisation bâtiment",
     "bureau d’étude électricité",
     "dessinateur projeteur",
     "plans PCM",
-    "Revit",
-    "ArchiCAD",
-    "sous-traitance BTP",
+    "Assistance administrative construction et rénovation",
+    "Construction et rénovation batiment",
+    "Prestataire de services",
     "main-d'œuvre compétitive",
     "Xterna Madagascar",
+    "externalisation Madagascar",
+    "comment externaliser à Madagascar",
   ],
   authors: [{ name: "Xterna Madagascar", url: "https://xterna-mg.vercel.app" }],
   creator: "Xterna Madagascar",
@@ -39,7 +41,7 @@ export const metadata : Metadata = {
   openGraph: {
     title: "Xterna Madagascar",
     description:
-      "Partenaire d'externalisation bâtiment pour les PME francophones. Bureau d’étude, dessin technique et assistance administrative.",
+      "Partenaire d'externalisation professionnel pour les PME francophones. Bureau d’étude, dessin technique et assistance administrative.",
     url: "https://xterna-mg.vercel.app",
     siteName: "Xterna Madagascar",
     images: [
@@ -58,7 +60,7 @@ export const metadata : Metadata = {
     card: "summary_large_image",
     title: "Xterna Madagascar",
     description:
-      "Externalisation de services bâtiment pour PME en France, Belgique et Suisse.",
+      "Externalisation de services dans plusieurs domaines pour PME en France, Belgique et Suisse.",
     images: ["https://xterna-mg.vercel.app/og-image.jpg"],
   },
 };

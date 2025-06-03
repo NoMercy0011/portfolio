@@ -122,7 +122,7 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-gray-800">Email</p>
                     <a href="mailto:contact@xterna-madagascar.com" className="text-cyan-600 hover:underline">
-                      contact@xterna-madagascar.com
+                      xterna.madagascar@gmail.com
                     </a>
                   </div>
                 </div>
@@ -130,9 +130,9 @@ export default function Contact() {
                 <div className="flex items-start gap-3">
                   <Phone className="text-cyan-600 mt-1" size={20} />
                   <div>
-                    <p className="font-medium text-gray-800">Téléphone</p>
-                    <a href="tel:+261123456789" className="text-cyan-600 hover:underline">
-                      +261 12 345 67 89
+                    <p className="font-medium text-gray-800">Whatsapp</p>
+                    <a href="tel:+261347808657" className="text-cyan-600 hover:underline">
+                      +261 34 78 086 57
                     </a>
                   </div>
                 </div>

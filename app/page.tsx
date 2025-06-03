@@ -11,6 +11,7 @@ export default function Home() {
   
 
   return (
+    <>
     <main className="min-h-screen font-[family-name:var(--font-geist-sans)] bg-gray-50 pb-5">
 
       <HeroSectionHome />
@@ -32,8 +33,9 @@ export default function Home() {
       <ServiceSection />
       <StatsSection />
       <CallToActionHome />
-      <Footer />
     </main>
+    <Footer />
+    </>
   );
 }
 
