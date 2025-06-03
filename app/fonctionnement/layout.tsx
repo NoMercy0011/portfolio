@@ -14,50 +14,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata : Metadata = {
-  title: {
-    default: "XTERNA Madagascar",
-    template: "%s | Xterna Madagascar",
-  },
+  title: "Fonctionnement de notre externalisation",
   description:
-    "Xterna Madagascar est une société d’externalisation spécialisée dans le bâtiment. Nous accompagnons les PME en France, Belgique et Suisse avec des services compétitifs et fiables.",
+    "Découvrez comment Xterna Madagascar accompagne les bureaux d’études et les PME dans le bâtiment avec un processus d’externalisation clair, efficace et sécurisé.",
   keywords: [
     "externalisation bâtiment",
+    "fonctionnement externalisation",
+    "processus de sous-traitance",
     "bureau d’étude électricité",
-    "dessinateur projeteur",
-    "plans PCM",
     "Revit",
     "ArchiCAD",
-    "sous-traitance BTP",
-    "main-d'œuvre compétitive",
-    "Xterna Madagascar",
+    "plans PCM",
+    "dessinateur projeteur offshore",
+    "collaboration Madagascar France",
+    "Xterna Madagascar fonctionnement"
   ],
-  authors: [{ name: "Xterna Madagascar", url: "https://xterna-mg.vercel.app" }],
-  creator: "Xterna Madagascar",
-  metadataBase: new URL("https://xterna-mg.vercel.app"),
-
   openGraph: {
-    title: "Xterna Madagascar",
+    title: "Fonctionnement de notre externalisation | Xterna Madagascar",
     description:
-      "Partenaire d'externalisation bâtiment pour les PME francophones. Bureau d’étude, dessin technique et assistance administrative.",
-    url: "https://xterna-mg.vercel.app",
+      "Un processus d’externalisation simple, structuré et adapté aux besoins des professionnels du bâtiment. Découvrez les étapes de notre collaboration.",
+    url: "https://xterna-mg.vercel.app/fonctionnement",
     siteName: "Xterna Madagascar",
     images: [
       {
-        url: "https://xterna-mg.vercel.app/og-image.jpg", // à adapter
+        url: "https://xterna-mg.vercel.app/og-image.jpg", // Remplace si tu as une image spécifique
         width: 1200,
         height: 630,
-        alt: "Xterna Madagascar - Externalisation bâtiment",
+        alt: "Fonctionnement - Xterna Madagascar",
       },
     ],
     locale: "fr_FR",
-    type: "website",
+    type: "article",
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Xterna Madagascar",
+    title: "Fonctionnement de notre externalisation | Xterna Madagascar",
     description:
-      "Externalisation de services bâtiment pour PME en France, Belgique et Suisse.",
+      "Comprenez notre méthode de travail avec les PME du bâtiment. Externalisez vos projets en toute confiance avec Xterna Madagascar.",
     images: ["https://xterna-mg.vercel.app/og-image.jpg"],
   },
 };

@@ -33,11 +33,11 @@ export default function ServiceSection() {
                   <p className="text-xl text-gray-600">Des solutions complètes pour tous vos besoins</p>
                 </div>
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                   {services.map((service, index) => (
-                    <div key={index} className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
-                      <div className="text-blue-600 mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                    <div key={index} className="bg-gradient-to-br min-w-55 from-white to-gray-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+                      <div className="text-orange-600 mb-4">{service.icon}</div>
+                      <h3 className="text-xl font-bold text-gray-900 mb-4 hover:text-blue-600 cursor-pointer">{service.title}</h3>
                       <ul className="space-y-2">
                         {service.items.map((item, i) => (
                           <li key={i} className="text-gray-600 flex items-center">
